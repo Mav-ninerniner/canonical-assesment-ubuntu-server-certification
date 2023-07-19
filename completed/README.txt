@@ -1,5 +1,5 @@
 Copy your new script here
-I have converted the first script "disk_cpu_load"
+I have converted the first script "disk_cpu_load". This is the link to the github repo: https://github.com/Mav-ninerniner/canonical-assesment-ubuntu-server-certification
 
 #!/usr/bin/env python3
 import os
