@@ -1,0 +1,43 @@
+*Test Case 1: SSH Connectivity using Password-based Authentication*
+
+*Setup:*
+1. Ensure you have a server and a client machine ready for testing. The server should have SSH server installed and running.
+2. Configure the SSH server to allow password-based authentication. This can typically be done by modifying the SSH daemon configuration file.
+3. Ensure the client machine has SSH client installed.
+4. A user account should be created on the server with a known password.
+
+*Steps:*
+1. From the client machine, try to initiate a SSH connection to the server using the known user account and password.
+
+*Tools used:* SSH client and server
+
+*Pass/Fail Criteria:*
+- The test is successful (pass) if the SSH connection is established and the user is logged into the server.
+- The test fails if the connection is not established or the user is not logged into the server.
+
+*Teardown:*
+- Close the SSH connection
+
+---
+
+*Test Case 2: SSH Connectivity using Key-based Authentication*
+
+*Setup:*
+1. Ensure you have a server and a client machine ready for testing. The server should have SSH server installed and running.
+2. Configure the SSH server to allow key-based authentication. This can typically be done by modifying the SSH daemon configuration file.
+3. Ensure the client machine has SSH client installed.
+4. Generate a public-private key pair on the client machine. Add the public key to the `authorized_keys` file for the user on the server.
+
+*Steps:*
+1. From the client machine, try to initiate a SSH connection to the server using the known user account and private key.
+
+*Tools used:* SSH client and server, key generation tools (e.g. ssh-keygen)
+
+*Pass/Fail Criteria:*
+- The test is successful (pass) if the SSH connection is established and the user is logged into the server.
+- The test fails if the connection is not established or the user is not logged into the server.
+
+*Teardown:*
+- Close the SSH connection
+- Optional: Remove the public key from the `authorized_keys` file on the server.
+- Optional: Reset the SSH server configuration to its original state.
